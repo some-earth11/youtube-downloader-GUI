@@ -12,13 +12,15 @@ root = tk.Tk()
 
 # Setting up the Box
 root.geometry("720x480")                      
-root.resizable(False, False)    
+root.resizable(False, False)
+root.iconbitmap('youtube_icon.ico')    
 root.title("YouTube Downloader")
-root.config(background="red")
+root.config(background="black")
 
 # Creating the tkinter Variables
 URL = StringVar()
 Download_Path = StringVar()
+
 
 def Widgets():
 
@@ -27,7 +29,7 @@ def Widgets():
 					padx=15,
 					pady=15,
 					font="Lemonmilk 18",
-					bg="red",
+					bg="black",
 					fg="white")
     head_label.grid(row=1,
 					column=1,
@@ -38,8 +40,8 @@ def Widgets():
     link_label = Label(root,
                     text='URL :',
                     font='SegoeUI 12',
-                    bg='black',
-                    fg='white',
+                    bg='lime',
+                    fg='black',
                     pady=5,
                     padx=5)
     link_label.grid(row=2,
@@ -60,8 +62,8 @@ def Widgets():
     destination_label = Label(root,
                     text='Destination :',
                     font='SegoeUI 12',
-                    bg='black',
-                    fg='white',
+                    bg='lime',
+                    fg='black',
                     pady=5,
                     padx=5)
     destination_label.grid(row=3,
@@ -83,7 +85,7 @@ def Widgets():
                     text='Browse',
                     command=Browse,
                     width=10,
-                    bg='white',
+                    bg='grey',
                     relief='groove')
     browse_button.grid(row=3,
                     column=3,
@@ -157,4 +159,4 @@ root.mainloop()
 
 
 
-#Code Created by Samarth Kumar
+#Created by Samarth Kumar
