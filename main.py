@@ -110,23 +110,29 @@ def Browse():
 	Download_Path.set(download_Directory)
 
 
-# Getting user-input Youtube Link
-url = URL.get()
-download_Folder = Download_Path.get()
-video = pafy.new(url)
+Download_Folder = Download_Path.get()
 
 def DownloadVideo(): 
+    # Getting user-input Youtube Link
+    url = URL.get()
+    Download_Folder = Download_Path.get()
+    video = pf.new(url)
     # Getting the best resolution video   
-	best = video.getbest()                 
-	best.download(download_Folder)
+    best = video.getbest()                 
+    best.download(Download_Folder)
+    # Displaying the Confirmation message
+    messagebox.showinfo("SUCCESSFULLY","VIDEO DOWNLOADED AND SAVED IN\n" + Download_Folder)
 
 def DownloadAudio():
+    
+    url = URL.get()
+    Download_Folder = Download_Path.get()
+    video = pf.new(url)
     # Getting the best quality audio
     bestaudio = video.getbestaudio()
-    bestaudio.download()
-
-# Displaying the Confirmation message
-messagebox.showinfo("SUCCESSFULLY","DOWNLOADED AND SAVED IN\n" + download_Folder)
+    bestaudio.download(Download_Folder)
+    
+    messagebox.showinfo("SUCCESSFULLY","AUDIO DOWNLOADED AND SAVED IN\n" + Download_Folder)
 
 
 
