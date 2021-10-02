@@ -18,11 +18,7 @@ pip install youtube-dl
 import pafy
 
 url = input("Enter Video URL: ")
-<<<<<<< HEAD
-video = pafy.new(url)
-=======
 video = pafy.new(url) 
->>>>>>> f4a059b655ea137f98d73a8a8e224a8c1625e850
 
 # Downloads the best resolution possible       
 best = video.getbest()   
@@ -30,10 +26,24 @@ best.download()
 ```
 For a more detailed usage guide  , check out [Pafy - Tutorial](https://www.geeksforgeeks.org/youtube-mediaaudio-download-using-python-pafy/) .
 
+## Screenshots
+### Interface
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss1.jpg)
+### Browse Function
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss2.jpg)
+### Process
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss3.jpg)
+### Video Downloaded Successfully
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss5.jpg)
+### Destination Folder
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss6.jpg)
+### Seems Fine :)
+![Youtube Downloader Python](https://github.com/some-earth11/youtube-downloader/blob/main/Images/ss7.jpg)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
-### [MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)
