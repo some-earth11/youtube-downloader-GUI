@@ -18,7 +18,7 @@ pip install youtube-dl
 import pafy
 
 url = input("Enter Video URL: ")
-video = pafy.new(url) 
+video = pafy.new(url)
 
 # Downloads the best resolution possible       
 best = video.getbest()   
