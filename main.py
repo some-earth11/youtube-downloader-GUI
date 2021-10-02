@@ -120,17 +120,18 @@ def DownloadVideo():
 	best = video.getbest()                 
 	best.download(download_Folder)
 
-	# Displaying the confirmation message
-	messagebox.showinfo("SUCCESSFULLY","DOWNLOADED VIDEO AND SAVED IN\n" + download_Folder)
-
 def DownloadAudio():
     # Getting the best quality audio
     bestaudio = video.getbestaudio()
     bestaudio.download()
 
-    # Displaying the confirmation message
-	messagebox.showinfo("SUCCESSFULLY","DOWNLOADED AUDIO AND SAVED IN\n" + download_Folder)
+# Displaying the Confirmation message
+messagebox.showinfo("SUCCESSFULLY","DOWNLOADED AND SAVED IN\n" + download_Folder)
 
-    
+
+
+# Calling all Widgets into Action    
 Widgets()
+
+# Infinte Loop for the Program
 root.mainloop()
