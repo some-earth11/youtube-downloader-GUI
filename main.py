@@ -97,7 +97,21 @@ def Browse():
 	Download_Path.set(download_Directory)
 
 
+def Download():
 
+	# Getting user-input Youtube Link
+	url = URL.get()
+	download_Folder = Download_Path.get()
+	video = pafy.new(url) 
+
+    # Getting the best resolution video   
+	best = video.getbest()                 
+	best.download(download_Folder)
+
+	# Displaying the message
+	messagebox.showinfo("SUCCESSFULLY",
+						"DOWNLOADED AND SAVED IN\n"
+						+ download_Folder)
 
 Widgets()
 root.mainloop()
