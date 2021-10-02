@@ -33,7 +33,7 @@ def Widgets():
 					column=1,
 					pady=10,
 					padx=30,
-					columnspan=4)
+					columnspan=3)
     
     link_label = Label(root,
                     text='URL :',
@@ -97,9 +97,22 @@ def Widgets():
                     bg='white',
                     padx=10,
                     pady=15,
-                    relief='groove',)
+                    relief='groove')
     VDownload.grid(row=4,
                     column=1,
+                    pady=20,
+                    padx=20)
+
+    ADownload = Button(root,
+                    text="Download Audio",
+                    command=DownloadAudio,
+                    width=20,
+                    bg='white',
+                    padx=10,
+                    pady=15,
+                    relief='groove')
+    ADownload.grid(row=4,
+                    column=2,
                     pady=20,
                     padx=20)
 
