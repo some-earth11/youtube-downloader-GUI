@@ -10,7 +10,7 @@ from tkinter import messagebox, filedialog
 # Creating object of tk class
 root = tk.Tk()
 
-# Setting up the Box
+# Setting up the Box 
 root.geometry("720x480")                      
 root.resizable(False, False)
 root.iconbitmap('youtube_icon.ico')    
