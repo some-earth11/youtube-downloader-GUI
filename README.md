@@ -36,8 +36,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-<<<<<<< HEAD
-[MIT](https://choosealicense.com/licenses/mit/)
-=======
-[MIT](https://choosealicense.com/licenses/mit/)
->>>>>>> f4a059b655ea137f98d73a8a8e224a8c1625e850
+### [MIT](https://choosealicense.com/licenses/mit/)
