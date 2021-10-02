@@ -90,6 +90,19 @@ def Widgets():
                     pady=1,
                     padx=1)
 
+    VDownload = Button(root,
+                    text="Download Video",
+                    command=DownloadVideo,
+                    width=20,
+                    bg='white',
+                    padx=10,
+                    pady=15,
+                    relief='groove',)
+    VDownload.grid(row=4,
+                    column=1,
+                    pady=20,
+                    padx=20)
+
 
 def Browse():
 	download_Directory = filedialog.askdirectory(initialdir="YOUR DIRECTORY PATH", title="Save Video")
@@ -97,21 +110,27 @@ def Browse():
 	Download_Path.set(download_Directory)
 
 
-def Download():
+# Getting user-input Youtube Link
+url = URL.get()
+download_Folder = Download_Path.get()
+video = pafy.new(url)
 
-	# Getting user-input Youtube Link
-	url = URL.get()
-	download_Folder = Download_Path.get()
-	video = pafy.new(url) 
-
+def DownloadVideo(): 
     # Getting the best resolution video   
 	best = video.getbest()                 
 	best.download(download_Folder)
 
-	# Displaying the message
-	messagebox.showinfo("SUCCESSFULLY",
-						"DOWNLOADED AND SAVED IN\n"
-						+ download_Folder)
+	# Displaying the confirmation message
+	messagebox.showinfo("SUCCESSFULLY","DOWNLOADED VIDEO AND SAVED IN\n" + download_Folder)
 
+def DownloadAudio():
+    # Getting the best quality audio
+    bestaudio = video.getbestaudio()
+    bestaudio.download()
+
+    # Displaying the confirmation message
+	messagebox.showinfo("SUCCESSFULLY","DOWNLOADED AUDIO AND SAVED IN\n" + download_Folder)
+
+    
 Widgets()
 root.mainloop()
